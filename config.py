@@ -23,6 +23,7 @@ class DevelopmentConfig(Config):
                                                            Config.mysql_host, database)
 
 
+
 class ProductionConfig(Config):
     database = 'product01'
     SQLALCHEMY_DATABASE_URI = 'mysql://{}:{}@{}/{}'.format(Config.mysql_username, Config.mysql_password,
