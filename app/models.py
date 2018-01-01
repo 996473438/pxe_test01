@@ -8,9 +8,10 @@ class User(db.Model):
     password = db.Column(db.String(128))
     note = db.Column(db.String(128))
 
-    def __init__(self, username, password):
+    def __init__(self, username, password, note=''):
         self.username = username
         self.password = password
+        self.note = note
 
     def this_query(self):
         return User.query.filter_by(username=self.username, password=self.password).first()
